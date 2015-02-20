@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Distributor" representedClassName="Distributor" syncable="YES">
+        <attribute name="distributorCompanyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorDeliveryDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorOfficePhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorRequestDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorRequestTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorSecondOfficePhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distributorSecondPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES">
+        <attribute name="employeeDateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="employeeEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeePhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeSecondPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeShop" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shop" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shop" inverseName="employee" inverseEntity="Shop" syncable="YES"/>
+    </entity>
+    <entity name="Shop" representedClassName="Shop" syncable="YES">
+        <attribute name="shopEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopSecondPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="shop" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" syncable="YES">
+        <attribute name="storeEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storePhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeSecondPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Distributor" positionX="-243" positionY="-162" width="128" height="225"/>
+        <element name="Employee" positionX="81" positionY="-54" width="128" height="178"/>
+        <element name="Shop" positionX="-99" positionY="-9" width="128" height="133"/>
+        <element name="Store" positionX="-101" positionY="-163" width="128" height="118"/>
+    </elements>
+</model>
